@@ -15,3 +15,5 @@ fpga_ml/vivado/
 .env
 .env.*
 !.env.example
+
+xsim.dir/

@@ -1,1 +1,0 @@
-"tb_uart" -L "unisims_ver" -debug "typical" -s "uart_power_test" 

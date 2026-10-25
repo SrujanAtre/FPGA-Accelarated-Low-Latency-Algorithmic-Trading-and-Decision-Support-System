@@ -1,0 +1,216 @@
+{
+  "validation": {
+    "samples": 643,
+    "matching": 643,
+    "agreement_percent": 100,
+    "max_score_error": 2.6211674053477907e-07,
+    "classification_accuracy": 0.48833592534992226,
+    "status": "RTL simulation compared with original saved LightGBM"
+  },
+  "inference": {
+    "frequency_hz": 125000000.0,
+    "min_cycles": 783,
+    "mean_cycles": 924.6360808709176,
+    "max_cycles": 993,
+    "min_ns": 6264,
+    "mean_ns": 7397.0886469673405,
+    "max_ns": 7944,
+    "status": "Measured FPGA core cycle counters on 643 physical ZCU104 inferences; time calculated using implemented 125 MHz clock, identical to RTL simulation"
+  },
+  "uart_simulation": [
+    {
+      "sample": 0,
+      "prediction": 0,
+      "cycles": 915,
+      "input_transfer_ns": 9456884,
+      "fpga_processing_ns": 7336,
+      "output_ns": 2604712,
+      "total_ns": 12068932
+    },
+    {
+      "sample": 155,
+      "prediction": 1,
+      "cycles": 949,
+      "input_transfer_ns": 9456880,
+      "fpga_processing_ns": 7608,
+      "output_ns": 2604712,
+      "total_ns": 12069200
+    },
+    {
+      "sample": 13,
+      "prediction": 2,
+      "cycles": 935,
+      "input_transfer_ns": 9456880,
+      "fpga_processing_ns": 7496,
+      "output_ns": 2604712,
+      "total_ns": 12069088
+    }
+  ],
+  "workload_simulation": [
+    {
+      "offered_per_second": 62500.0,
+      "samples": 643,
+      "achieved_per_second": 62551.55882764954,
+      "min_latency_cycles": 783,
+      "max_latency_cycles": 993,
+      "max_external_queue_delay_us": 0.0,
+      "status": "RTL simulation; pending requests held by testbench, not a hardware FIFO"
+    },
+    {
+      "offered_per_second": 125000.0,
+      "samples": 643,
+      "achieved_per_second": 125011.66516315675,
+      "min_latency_cycles": 783,
+      "max_latency_cycles": 993,
+      "max_external_queue_delay_us": 0.0,
+      "status": "RTL simulation; pending requests held by testbench, not a hardware FIFO"
+    },
+    {
+      "offered_per_second": 250000.0,
+      "samples": 643,
+      "achieved_per_second": 134896.76516298382,
+      "min_latency_cycles": 783,
+      "max_latency_cycles": 993,
+      "max_external_queue_delay_us": 2191.088,
+      "status": "RTL simulation; pending requests held by testbench, not a hardware FIFO"
+    }
+  ],
+  "rom_bytes": 32672,
+  "hardware_results_available": true,
+  "artifact_sha256": {
+    "rtl\\nodes.mem": "3d24f5fce6a52008e338a5a16a7adb63bba38ee3d4e1851b4c673aa7ae752bfd",
+    "rtl\\roots.mem": "59e7e1c6702c9aa6a0a39e0f51bb6ebece55f1ab86311c8a107fab09b0c2439c",
+    "rtl\\ml_core.v": "167c1b8a45bf5e33540234e76af408f184231687b6bb2459935b1563ccb6f4bf",
+    "rtl\\fpga_ml_top.v": "b592669b2fd47152cc54d2852bc9733430bdadbf90ab4b45f05c5fc7f62cf58b"
+  },
+  "physical": {
+    "samples": 643,
+    "matching": 643,
+    "agreement_percent": 100,
+    "classification_accuracy": 0.48833592534992226,
+    "core_cycles": {
+      "count": 643.0,
+      "mean": 924.6360808709176,
+      "std": 43.79175520424865,
+      "min": 783.0,
+      "50%": 931.0,
+      "95%": 977.0,
+      "99%": 990.1600000000001,
+      "max": 993.0
+    },
+    "host_stages_ns": {
+      "preprocessing_ns": {
+        "count": 643.0,
+        "mean": 93731.25972006221,
+        "std": 21964.50555268371,
+        "min": 62000.0,
+        "50%": 95600.0,
+        "95%": 123629.99999999999,
+        "99%": 165448.00000000003,
+        "max": 237300.0
+      },
+      "input_write_ns": {
+        "count": 643.0,
+        "mean": 240871.38413685848,
+        "std": 480362.8711024105,
+        "min": 91200.0,
+        "50%": 166500.0,
+        "95%": 362129.9999999998,
+        "99%": 3616678.000000017,
+        "max": 5225000.0
+      },
+      "uart_roundtrip_ns": {
+        "count": 643.0,
+        "mean": 15542789.424572317,
+        "std": 1572027.9597226216,
+        "min": 12788100.0,
+        "50%": 15387900.0,
+        "95%": 15632390.0,
+        "99%": 24107616.000000425,
+        "max": 31898600.0
+      },
+      "end_to_end_ns": {
+        "count": 643.0,
+        "mean": 15636520.68429238,
+        "std": 1573652.8532316987,
+        "min": 12895100.0,
+        "50%": 15482000.0,
+        "95%": 15705450.0,
+        "99%": 24215656.000000425,
+        "max": 32013200.0
+      }
+    },
+    "sustained_per_second_excluding_between_iteration_overhead": 63.95284604487154,
+    "status": "Measured programmed ZCU104 over COM7; cycle counters match RTL; host end-to-end timing uses perf_counter_ns"
+  },
+  "physical_workloads": [
+    {
+      "workload": "low",
+      "samples": 16,
+      "offered_rate": 10.0,
+      "elapsed_ns": 1517073600,
+      "sustained_per_second": 10.546620809959386,
+      "roundtrip_ns": {
+        "count": 16.0,
+        "mean": 23520787.5,
+        "std": 4632579.23621748,
+        "min": 15922700.0,
+        "50%": 23797000.0,
+        "95%": 29327525.0,
+        "99%": 29853665.0,
+        "max": 29985200.0
+      },
+      "min_cycles": 909,
+      "max_cycles": 955,
+      "agreement": 1.0
+    },
+    {
+      "workload": "medium",
+      "samples": 64,
+      "offered_rate": 25.0,
+      "elapsed_ns": 2548033600,
+      "sustained_per_second": 25.11740818488422,
+      "roundtrip_ns": {
+        "count": 64.0,
+        "mean": 23213871.875,
+        "std": 4694442.3053821325,
+        "min": 17605200.0,
+        "50%": 25683950.0,
+        "95%": 29587004.999999993,
+        "99%": 33928217.99999999,
+        "max": 34987500.0
+      },
+      "min_cycles": 881,
+      "max_cycles": 993,
+      "agreement": 1.0
+    },
+    {
+      "workload": "continuous",
+      "samples": 256,
+      "offered_rate": "stop-and-wait saturation",
+      "elapsed_ns": 5894216800,
+      "sustained_per_second": 43.43240309721895,
+      "roundtrip_ns": {
+        "count": 256.0,
+        "mean": 22319642.1875,
+        "std": 9222207.775136162,
+        "min": 13777500.0,
+        "50%": 16390150.0,
+        "95%": 34038825.0,
+        "99%": 49050249.999999836,
+        "max": 76132700.0
+      },
+      "min_cycles": 785,
+      "max_cycles": 993,
+      "agreement": 1.0
+    }
+  ],
+  "physical_pipeline": {
+    "samples": 643,
+    "agreement": 1.0,
+    "wall_clock_elapsed_ns": 10399326400,
+    "actual_wall_clock_sustained_per_second": 61.83092781855563,
+    "reciprocal_summed_per_bar_latency_per_second": 63.95284604487155,
+    "status": "Measured board run including loop overhead and host scaling/encoding; excludes initial CSV loading and full-history feature generation"
+  }
+}

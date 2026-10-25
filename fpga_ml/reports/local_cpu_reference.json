@@ -1,0 +1,18 @@
+{
+  "description": "Newly measured local PC Python LightGBM Booster, batch=1, num_threads=1; includes Python prediction API and argmax overhead; excludes feature engineering, scaler, and UART; not teammates optimized CPU pipeline",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+  "samples": 1929,
+  "latency_ns": {
+    "count": 1929.0,
+    "mean": 139738.20632452046,
+    "std": 157658.55483925054,
+    "min": 60900.0,
+    "50%": 105100.0,
+    "95%": 293299.99999999977,
+    "99%": 652904.0,
+    "max": 4100900.0
+  },
+  "sustained_inferences_per_second_excluding_loop_overhead": 7156.238986477713,
+  "cpu_power": "unavailable"
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "historical_test_sample": 0,
+    "time": "2026-03-16 11:40:00+05:30",
+    "close": 23149.5,
+    "software": "BUY",
+    "physical_fpga": "BUY",
+    "measured_cycles": 915,
+    "inference_us_at_125MHz": 7.32,
+    "raw_class_scores": [
+      -0.7168875336647034,
+      -1.9739798307418823,
+      -1.207224726676941
+    ]
+  },
+  {
+    "historical_test_sample": 155,
+    "time": "2026-03-18 12:05:00+05:30",
+    "close": 23779.599609375,
+    "software": "HOLD",
+    "physical_fpga": "HOLD",
+    "measured_cycles": 949,
+    "inference_us_at_125MHz": 7.5920000000000005,
+    "raw_class_scores": [
+      -0.9833986759185791,
+      -0.8833535313606262,
+      -1.2233407497406006
+    ]
+  },
+  {
+    "historical_test_sample": 13,
+    "time": "2026-03-16 12:45:00+05:30",
+    "close": 23102.650390625,
+    "software": "SELL",
+    "physical_fpga": "SELL",
+    "measured_cycles": 935,
+    "inference_us_at_125MHz": 7.48,
+    "raw_class_scores": [
+      -0.870140552520752,
+      -1.869874358177185,
+      -0.8234362006187439
+    ]
+  }
+]

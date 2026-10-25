@@ -1,0 +1,8 @@
+{
+  "samples": 643,
+  "agreement": 1.0,
+  "wall_clock_elapsed_ns": 12747403900,
+  "actual_wall_clock_sustained_per_second": 50.44164325882857,
+  "reciprocal_summed_per_bar_latency_per_second": 56.971001919506335,
+  "status": "Measured board run including loop overhead and host scaling/encoding; excludes initial CSV loading and full-history feature generation"
+}

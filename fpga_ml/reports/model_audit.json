@@ -1,0 +1,118 @@
+{
+  "model_sha256": "a73e016c137065fe945459ebe161c2f00bc7bc2d9b622513441eacded8e294c0",
+  "trees": 72,
+  "nodes": 4084,
+  "max_depth": 6,
+  "features": [
+    "hour",
+    "minute",
+    "day_of_week",
+    "hour_sin",
+    "hour_cos",
+    "minute_sin",
+    "minute_cos",
+    "rsi",
+    "macd",
+    "macd_signal_line",
+    "macd_hist",
+    "bb_upper",
+    "bb_mid",
+    "bb_lower",
+    "bb_width",
+    "bb_pct",
+    "vwap",
+    "vwap_dev",
+    "obv",
+    "obv_norm",
+    "roc",
+    "momentum",
+    "ofi_proxy",
+    "volume_zscore",
+    "atr",
+    "close_norm",
+    "hl_ratio"
+  ],
+  "samples": 643,
+  "matching": 643,
+  "agreement_percent": 100.0,
+  "accuracy": 0.48833592534992226,
+  "confusion_matrix": [
+    [
+      228,
+      2,
+      72
+    ],
+    [
+      35,
+      2,
+      20
+    ],
+    [
+      197,
+      3,
+      84
+    ]
+  ],
+  "max_raw_score_error": 2.6211674053477907e-07,
+  "max_feature_quantization_error": 0.0,
+  "onnx": {
+    "lstm": {
+      "operators": {
+        "Shape": 4,
+        "Concat": 9,
+        "Expand": 1,
+        "Transpose": 5,
+        "Slice": 35,
+        "Unsqueeze": 5,
+        "LSTM": 3,
+        "Mul": 3,
+        "Reshape": 6,
+        "Gather": 1,
+        "LayerNormalization": 1,
+        "Gemm": 2,
+        "Relu": 1
+      },
+      "inputs": [
+        [
+          "batch_size",
+          30,
+          27
+        ]
+      ],
+      "outputs": [
+        [
+          1,
+          3
+        ]
+      ],
+      "initializer_elements": 92687
+    },
+    "cnn": {
+      "operators": {
+        "Transpose": 1,
+        "Conv": 3,
+        "Relu": 4,
+        "ReduceMean": 1,
+        "Gemm": 2
+      },
+      "inputs": [
+        [
+          "batch_size",
+          30,
+          27
+        ]
+      ],
+      "outputs": [
+        [
+          "batch_size",
+          3
+        ]
+      ],
+      "initializer_elements": 56772
+    }
+  },
+  "scaler": "RobustScaler",
+  "data_first": "2026-03-16 06:10:00+00:00",
+  "data_last": "2026-03-27 09:40:00+00:00",
+  "status": "software fixed-point representation validation, not RTL or board validation"
+}

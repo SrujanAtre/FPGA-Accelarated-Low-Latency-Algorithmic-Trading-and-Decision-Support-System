@@ -1,0 +1,62 @@
+[
+  {
+    "workload": "low",
+    "samples": 16,
+    "offered_rate": 10.0,
+    "elapsed_ns": 1517073600,
+    "sustained_per_second": 10.546620809959386,
+    "roundtrip_ns": {
+      "count": 16.0,
+      "mean": 23520787.5,
+      "std": 4632579.23621748,
+      "min": 15922700.0,
+      "50%": 23797000.0,
+      "95%": 29327525.0,
+      "99%": 29853665.0,
+      "max": 29985200.0
+    },
+    "min_cycles": 909,
+    "max_cycles": 955,
+    "agreement": 1.0
+  },
+  {
+    "workload": "medium",
+    "samples": 64,
+    "offered_rate": 25.0,
+    "elapsed_ns": 2548033600,
+    "sustained_per_second": 25.11740818488422,
+    "roundtrip_ns": {
+      "count": 64.0,
+      "mean": 23213871.875,
+      "std": 4694442.3053821325,
+      "min": 17605200.0,
+      "50%": 25683950.0,
+      "95%": 29587004.999999993,
+      "99%": 33928217.99999999,
+      "max": 34987500.0
+    },
+    "min_cycles": 881,
+    "max_cycles": 993,
+    "agreement": 1.0
+  },
+  {
+    "workload": "continuous",
+    "samples": 256,
+    "offered_rate": "stop-and-wait saturation",
+    "elapsed_ns": 5894216800,
+    "sustained_per_second": 43.43240309721895,
+    "roundtrip_ns": {
+      "count": 256.0,
+      "mean": 22319642.1875,
+      "std": 9222207.775136162,
+      "min": 13777500.0,
+      "50%": 16390150.0,
+      "95%": 34038825.0,
+      "99%": 49050249.999999836,
+      "max": 76132700.0
+    },
+    "min_cycles": 785,
+    "max_cycles": 993,
+    "agreement": 1.0
+  }
+]

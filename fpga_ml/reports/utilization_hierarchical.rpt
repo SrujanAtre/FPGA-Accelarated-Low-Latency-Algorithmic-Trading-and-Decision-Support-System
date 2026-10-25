@@ -1,0 +1,33 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Wed Oct  7 14:19:53 2026
+| Host         : SrujanI3 running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -file {C:/PBL 4 Project/fpga_ml/reports/utilization_hierarchical.rpt}
+| Design       : fpga_ml_top
+| Device       : xczu7ev-ffvc1156-2-e
+| Speed File   : -2
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++-----------------+---------+------------+------------+---------+------+------+--------+--------+------+------------+
+|     Instance    |  Module | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | URAM | DSP Blocks |
++-----------------+---------+------------+------------+---------+------+------+--------+--------+------+------------+
+| fpga_ml_top     |   (top) |       1754 |       1754 |       0 |    0 | 2324 |      7 |      1 |    0 |          0 |
+|   (fpga_ml_top) |   (top) |         96 |         96 |       0 |    0 | 1136 |      0 |      0 |    0 |          0 |
+|   core          | ml_core |        823 |        823 |       0 |    0 | 1106 |      7 |      1 |    0 |          0 |
+|   rx            | uart_rx |        807 |        807 |       0 |    0 |   56 |      0 |      0 |    0 |          0 |
+|   tx            | uart_tx |         30 |         30 |       0 |    0 |   26 |      0 |      0 |    0 |          0 |
++-----------------+---------+------------+------------+---------+------+------+--------+--------+------+------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+

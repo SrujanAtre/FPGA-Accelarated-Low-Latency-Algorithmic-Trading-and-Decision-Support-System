@@ -1,0 +1,27 @@
+{
+  "status": "measured",
+  "source": "Windows Energy Meter / RAPL_Package0_PKG",
+  "boundary": "CPU package, including other system activity; not whole-PC or process-only energy",
+  "workload_scope": "Live event loop: includes feed waits, features, inference and logging; excludes initial history/model loading",
+  "elapsed_seconds": 590.656,
+  "wall_elapsed_seconds": 590.6476668,
+  "energy_j": 2750.3831889972,
+  "average_power_w": 4.656489037607677,
+  "completed_decisions": 0,
+  "energy_per_decision_j": null,
+  "efficiency_decisions_per_j": null,
+  "start_counter": {
+    "energy_pwh": 13770871695000,
+    "meter_time_ms": 18905454,
+    "monotonic_ns": 18905483677600
+  },
+  "end_counter": {
+    "energy_pwh": 14534867025277,
+    "meter_time_ms": 19496110,
+    "monotonic_ns": 19496131344400
+  },
+  "raw_energy_unit": "picowatt-hour",
+  "joules_per_raw_energy_unit": 3.6e-09,
+  "raw_time_unit": "millisecond",
+  "qualification": "Hardware-reported RAPL telemetry; not an external calibrated power-meter reading"
+}

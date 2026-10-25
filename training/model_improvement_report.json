@@ -1,0 +1,1151 @@
+{
+  "status": "candidate evaluated, NOT activated on CPU or FPGA",
+  "input_interval_seconds": 300,
+  "live_provisional_validation": "not established; completed-bar data only",
+  "data_source": "fresh Yahoo five-minute completed OHLCV",
+  "raw_bars": 1571,
+  "labeled_rows": 1519,
+  "data_from": "2026-09-15 07:25:00+00:00",
+  "data_to": "2026-10-15 07:20:00+00:00",
+  "split": {
+    "train": [
+      "2026-09-16 05:15:00+00:00",
+      "2026-10-06 06:05:00+00:00",
+      984
+    ],
+    "validation": [
+      "2026-10-06 06:25:00+00:00",
+      "2026-10-09 08:50:00+00:00",
+      255
+    ],
+    "test": [
+      "2026-10-09 09:10:00+00:00",
+      "2026-10-15 07:05:00+00:00",
+      274
+    ],
+    "purged_bars_per_boundary": 3
+  },
+  "selection_rule": "highest validation macro F1, accuracy tie-break; frozen before test evaluation",
+  "selected_parameters": {
+    "n_estimators": 24,
+    "max_depth": 5,
+    "num_leaves": 31,
+    "learning_rate": 0.15,
+    "class_weight": "balanced",
+    "min_child_samples": 25,
+    "reg_lambda": 2.0,
+    "verbosity": -1,
+    "n_jobs": 1,
+    "random_state": 42,
+    "deterministic": true,
+    "force_col_wise": true
+  },
+  "candidates": [
+    {
+      "parameters": {
+        "n_estimators": 24,
+        "max_depth": 3,
+        "num_leaves": 7,
+        "learning_rate": 0.05,
+        "class_weight": null,
+        "min_child_samples": 25,
+        "reg_lambda": 2.0,
+        "verbosity": -1,
+        "n_jobs": 1,
+        "random_state": 42,
+        "deterministic": true,
+        "force_col_wise": true
+      },
+      "validation": {
+        "samples": 255,
+        "accuracy": 0.4470588235294118,
+        "macro_f1": 0.2793584607418309,
+        "confusion_matrix": [
+          [
+            95,
+            0,
+            13
+          ],
+          [
+            28,
+            0,
+            7
+          ],
+          [
+            93,
+            0,
+            19
+          ]
+        ],
+        "prediction_counts": {
+          "BUY": 216,
+          "HOLD": 0,
+          "SELL": 39
+        },
+        "per_class": {
+          "BUY": {
+            "precision": 0.4398148148148148,
+            "recall": 0.8796296296296297,
+            "f1-score": 0.5864197530864198,
+            "support": 108.0
+          },
+          "HOLD": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 35.0
+          },
+          "SELL": {
+            "precision": 0.48717948717948717,
+            "recall": 0.16964285714285715,
+            "f1-score": 0.25165562913907286,
+            "support": 112.0
+          },
+          "accuracy": 0.4470588235294118,
+          "macro avg": {
+            "precision": 0.30899810066476735,
+            "recall": 0.3497574955908289,
+            "f1-score": 0.2793584607418309,
+            "support": 255.0
+          },
+          "weighted avg": {
+            "precision": 0.4002513826043238,
+            "recall": 0.4470588235294118,
+            "f1-score": 0.35889711292905685,
+            "support": 255.0
+          }
+        }
+      }
+    },
+    {
+      "parameters": {
+        "n_estimators": 24,
+        "max_depth": 3,
+        "num_leaves": 7,
+        "learning_rate": 0.15,
+        "class_weight": null,
+        "min_child_samples": 25,
+        "reg_lambda": 2.0,
+        "verbosity": -1,
+        "n_jobs": 1,
+        "random_state": 42,
+        "deterministic": true,
+        "force_col_wise": true
+      },
+      "validation": {
+        "samples": 255,
+        "accuracy": 0.40784313725490196,
+        "macro_f1": 0.273167044595616,
+        "confusion_matrix": [
+          [
+            78,
+            0,
+            30
+          ],
+          [
+            23,
+            0,
+            12
+          ],
+          [
+            85,
+            1,
+            26
+          ]
+        ],
+        "prediction_counts": {
+          "BUY": 186,
+          "HOLD": 1,
+          "SELL": 68
+        },
+        "per_class": {
+          "BUY": {
+            "precision": 0.41935483870967744,
+            "recall": 0.7222222222222222,
+            "f1-score": 0.5306122448979592,
+            "support": 108.0
+          },
+          "HOLD": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 35.0
+          },
+          "SELL": {
+            "precision": 0.38235294117647056,
+            "recall": 0.23214285714285715,
+            "f1-score": 0.28888888888888886,
+            "support": 112.0
+          },
+          "accuracy": 0.40784313725490196,
+          "macro avg": {
+            "precision": 0.26723592662871604,
+            "recall": 0.3181216931216931,
+            "f1-score": 0.273167044595616,
+            "support": 255.0
+          },
+          "weighted avg": {
+            "precision": 0.3455445176172936,
+            "recall": 0.40784313725490196,
+            "f1-score": 0.35161442354719663,
+            "support": 255.0
+          }
+        }
+      }
+    },
+    {
+      "parameters": {
+        "n_estimators": 24,
+        "max_depth": 3,
+        "num_leaves": 7,
+        "learning_rate": 0.05,
+        "class_weight": "balanced",
+        "min_child_samples": 25,
+        "reg_lambda": 2.0,
+        "verbosity": -1,
+        "n_jobs": 1,
+        "random_state": 42,
+        "deterministic": true,
+        "force_col_wise": true
+      },
+      "validation": {
+        "samples": 255,
+        "accuracy": 0.41568627450980394,
+        "macro_f1": 0.32250205741148025,
+        "confusion_matrix": [
+          [
+            81,
+            5,
+            22
+          ],
+          [
+            25,
+            4,
+            6
+          ],
+          [
+            88,
+            3,
+            21
+          ]
+        ],
+        "prediction_counts": {
+          "BUY": 194,
+          "HOLD": 12,
+          "SELL": 49
+        },
+        "per_class": {
+          "BUY": {
+            "precision": 0.4175257731958763,
+            "recall": 0.75,
+            "f1-score": 0.5364238410596026,
+            "support": 108.0
+          },
+          "HOLD": {
+            "precision": 0.3333333333333333,
+            "recall": 0.11428571428571428,
+            "f1-score": 0.1702127659574468,
+            "support": 35.0
+          },
+          "SELL": {
+            "precision": 0.42857142857142855,
+            "recall": 0.1875,
+            "f1-score": 0.2608695652173913,
+            "support": 112.0
+          },
+          "accuracy": 0.41568627450980394,
+          "macro avg": {
+            "precision": 0.3931435117002127,
+            "recall": 0.3505952380952381,
+            "f1-score": 0.32250205741148025,
+            "support": 255.0
+          },
+          "weighted avg": {
+            "precision": 0.41082137322282863,
+            "recall": 0.41568627450980394,
+            "f1-score": 0.36513181547959034,
+            "support": 255.0
+          }
+        }
+      }
+    },
+    {
+      "parameters": {
+        "n_estimators": 24,
+        "max_depth": 3,
+        "num_leaves": 7,
+        "learning_rate": 0.15,
+        "class_weight": "balanced",
+        "min_child_samples": 25,
+        "reg_lambda": 2.0,
+        "verbosity": -1,
+        "n_jobs": 1,
+        "random_state": 42,
+        "deterministic": true,
+        "force_col_wise": true
+      },
+      "validation": {
+        "samples": 255,
+        "accuracy": 0.3764705882352941,
+        "macro_f1": 0.2932401627566671,
+        "confusion_matrix": [
+          [
+            72,
+            11,
+            25
+          ],
+          [
+            24,
+            4,
+            7
+          ],
+          [
+            79,
+            13,
+            20
+          ]
+        ],
+        "prediction_counts": {
+          "BUY": 175,
+          "HOLD": 28,
+          "SELL": 52
+        },
+        "per_class": {
+          "BUY": {
+            "precision": 0.4114285714285714,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.508833922261484,
+            "support": 108.0
+          },
+          "HOLD": {
+            "precision": 0.14285714285714285,
+            "recall": 0.11428571428571428,
+            "f1-score": 0.12698412698412698,
+            "support": 35.0
+          },
+          "SELL": {
+            "precision": 0.38461538461538464,
+            "recall": 0.17857142857142858,
+            "f1-score": 0.24390243902439024,
+            "support": 112.0
+          },
+          "accuracy": 0.3764705882352941,
+          "macro avg": {
+            "precision": 0.31296703296703293,
+            "recall": 0.31984126984126987,
+            "f1-score": 0.2932401627566671,
+            "support": 255.0
+          },
+          "weighted avg": {
+            "precision": 0.3627890540831717,
+            "recall": 0.3764705882352941,
+            "f1-score": 0.34006110282124086,
+            "support": 255.0
+          }
+        }
+      }
+    },
+    {
+      "parameters": {
+        "n_estimators": 24,
+        "max_depth": 4,
+        "num_leaves": 15,
+        "learning_rate": 0.05,
+        "class_weight": null,
+        "min_child_samples": 25,
+        "reg_lambda": 2.0,
+        "verbosity": -1,
+        "n_jobs": 1,
+        "random_state": 42,
+        "deterministic": true,
+        "force_col_wise": true
+      },
+      "validation": {
+        "samples": 255,
+        "accuracy": 0.4117647058823529,
+        "macro_f1": 0.26747803095108486,
+        "confusion_matrix": [
+          [
+            83,
+            0,
+            25
+          ],
+          [
+            27,
+            0,
+            8
+          ],
+          [
+            90,
+            0,
+            22
+          ]
+        ],
+        "prediction_counts": {
+          "BUY": 200,
+          "HOLD": 0,
+          "SELL": 55
+        },
+        "per_class": {
+          "BUY": {
+            "precision": 0.415,
+            "recall": 0.7685185185185185,
+            "f1-score": 0.538961038961039,
+            "support": 108.0
+          },
+          "HOLD": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 35.0
+          },
+          "SELL": {
+            "precision": 0.4,
+            "recall": 0.19642857142857142,
+            "f1-score": 0.2634730538922156,
+            "support": 112.0
+          },
+          "accuracy": 0.4117647058823529,
+          "macro avg": {
+            "precision": 0.27166666666666667,
+            "recall": 0.3216490299823633,
+            "f1-score": 0.26747803095108486,
+            "support": 255.0
+          },
+          "weighted avg": {
+            "precision": 0.3514509803921569,
+            "recall": 0.4117647058823529,
+            "f1-score": 0.34398734997537395,
+            "support": 255.0
+          }
+        }
+      }
+    },
+    {
+      "parameters": {
+        "n_estimators": 24,
+        "max_depth": 4,
+        "num_leaves": 15,
+        "learning_rate": 0.15,
+        "class_weight": null,
+        "min_child_samples": 25,
+        "reg_lambda": 2.0,
+        "verbosity": -1,
+        "n_jobs": 1,
+        "random_state": 42,
+        "deterministic": true,
+        "force_col_wise": true
+      },
+      "validation": {
+        "samples": 255,
+        "accuracy": 0.42745098039215684,
+        "macro_f1": 0.2739237585863353,
+        "confusion_matrix": [
+          [
+            88,
+            0,
+            20
+          ],
+          [
+            25,
+            0,
+            10
+          ],
+          [
+            91,
+            0,
+            21
+          ]
+        ],
+        "prediction_counts": {
+          "BUY": 204,
+          "HOLD": 0,
+          "SELL": 51
+        },
+        "per_class": {
+          "BUY": {
+            "precision": 0.43137254901960786,
+            "recall": 0.8148148148148148,
+            "f1-score": 0.5641025641025641,
+            "support": 108.0
+          },
+          "HOLD": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 35.0
+          },
+          "SELL": {
+            "precision": 0.4117647058823529,
+            "recall": 0.1875,
+            "f1-score": 0.25766871165644173,
+            "support": 112.0
+          },
+          "accuracy": 0.42745098039215684,
+          "macro avg": {
+            "precision": 0.28104575163398693,
+            "recall": 0.334104938271605,
+            "f1-score": 0.2739237585863353,
+            "support": 255.0
+          },
+          "weighted avg": {
+            "precision": 0.36355247981545563,
+            "recall": 0.42745098039215684,
+            "f1-score": 0.35208616717097413,
+            "support": 255.0
+          }
+        }
+      }
+    },
+    {
+      "parameters": {
+        "n_estimators": 24,
+        "max_depth": 4,
+        "num_leaves": 15,
+        "learning_rate": 0.05,
+        "class_weight": "balanced",
+        "min_child_samples": 25,
+        "reg_lambda": 2.0,
+        "verbosity": -1,
+        "n_jobs": 1,
+        "random_state": 42,
+        "deterministic": true,
+        "force_col_wise": true
+      },
+      "validation": {
+        "samples": 255,
+        "accuracy": 0.403921568627451,
+        "macro_f1": 0.27746778069827654,
+        "confusion_matrix": [
+          [
+            82,
+            3,
+            23
+          ],
+          [
+            25,
+            1,
+            9
+          ],
+          [
+            87,
+            5,
+            20
+          ]
+        ],
+        "prediction_counts": {
+          "BUY": 194,
+          "HOLD": 9,
+          "SELL": 52
+        },
+        "per_class": {
+          "BUY": {
+            "precision": 0.422680412371134,
+            "recall": 0.7592592592592593,
+            "f1-score": 0.543046357615894,
+            "support": 108.0
+          },
+          "HOLD": {
+            "precision": 0.1111111111111111,
+            "recall": 0.02857142857142857,
+            "f1-score": 0.045454545454545456,
+            "support": 35.0
+          },
+          "SELL": {
+            "precision": 0.38461538461538464,
+            "recall": 0.17857142857142858,
+            "f1-score": 0.24390243902439024,
+            "support": 112.0
+          },
+          "accuracy": 0.403921568627451,
+          "macro avg": {
+            "precision": 0.3061356360325433,
+            "recall": 0.3221340388007055,
+            "f1-score": 0.27746778069827654,
+            "support": 255.0
+          },
+          "weighted avg": {
+            "precision": 0.3631972411838998,
+            "recall": 0.403921568627451,
+            "f1-score": 0.34336074072218575,
+            "support": 255.0
+          }
+        }
+      }
+    },
+    {
+      "parameters": {
+        "n_estimators": 24,
+        "max_depth": 4,
+        "num_leaves": 15,
+        "learning_rate": 0.15,
+        "class_weight": "balanced",
+        "min_child_samples": 25,
+        "reg_lambda": 2.0,
+        "verbosity": -1,
+        "n_jobs": 1,
+        "random_state": 42,
+        "deterministic": true,
+        "force_col_wise": true
+      },
+      "validation": {
+        "samples": 255,
+        "accuracy": 0.41568627450980394,
+        "macro_f1": 0.30616694914598375,
+        "confusion_matrix": [
+          [
+            79,
+            6,
+            23
+          ],
+          [
+            25,
+            2,
+            8
+          ],
+          [
+            81,
+            6,
+            25
+          ]
+        ],
+        "prediction_counts": {
+          "BUY": 185,
+          "HOLD": 14,
+          "SELL": 56
+        },
+        "per_class": {
+          "BUY": {
+            "precision": 0.42702702702702705,
+            "recall": 0.7314814814814815,
+            "f1-score": 0.5392491467576792,
+            "support": 108.0
+          },
+          "HOLD": {
+            "precision": 0.14285714285714285,
+            "recall": 0.05714285714285714,
+            "f1-score": 0.08163265306122448,
+            "support": 35.0
+          },
+          "SELL": {
+            "precision": 0.44642857142857145,
+            "recall": 0.22321428571428573,
+            "f1-score": 0.2976190476190476,
+            "support": 112.0
+          },
+          "accuracy": 0.41568627450980394,
+          "macro avg": {
+            "precision": 0.3387709137709138,
+            "recall": 0.33727954144620814,
+            "f1-score": 0.30616694914598375,
+            "support": 255.0
+          },
+          "weighted avg": {
+            "precision": 0.39654478007419186,
+            "recall": 0.41568627450980394,
+            "f1-score": 0.37031130996198247,
+            "support": 255.0
+          }
+        }
+      }
+    },
+    {
+      "parameters": {
+        "n_estimators": 24,
+        "max_depth": 5,
+        "num_leaves": 31,
+        "learning_rate": 0.05,
+        "class_weight": null,
+        "min_child_samples": 25,
+        "reg_lambda": 2.0,
+        "verbosity": -1,
+        "n_jobs": 1,
+        "random_state": 42,
+        "deterministic": true,
+        "force_col_wise": true
+      },
+      "validation": {
+        "samples": 255,
+        "accuracy": 0.4196078431372549,
+        "macro_f1": 0.26752911078582636,
+        "confusion_matrix": [
+          [
+            87,
+            0,
+            21
+          ],
+          [
+            27,
+            0,
+            8
+          ],
+          [
+            92,
+            0,
+            20
+          ]
+        ],
+        "prediction_counts": {
+          "BUY": 206,
+          "HOLD": 0,
+          "SELL": 49
+        },
+        "per_class": {
+          "BUY": {
+            "precision": 0.4223300970873786,
+            "recall": 0.8055555555555556,
+            "f1-score": 0.554140127388535,
+            "support": 108.0
+          },
+          "HOLD": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 35.0
+          },
+          "SELL": {
+            "precision": 0.40816326530612246,
+            "recall": 0.17857142857142858,
+            "f1-score": 0.2484472049689441,
+            "support": 112.0
+          },
+          "accuracy": 0.4196078431372549,
+          "macro avg": {
+            "precision": 0.27683112079783373,
+            "recall": 0.3280423280423281,
+            "f1-score": 0.26752911078582636,
+            "support": 255.0
+          },
+          "weighted avg": {
+            "precision": 0.358140926273422,
+            "recall": 0.4196078431372549,
+            "f1-score": 0.343816551821504,
+            "support": 255.0
+          }
+        }
+      }
+    },
+    {
+      "parameters": {
+        "n_estimators": 24,
+        "max_depth": 5,
+        "num_leaves": 31,
+        "learning_rate": 0.15,
+        "class_weight": null,
+        "min_child_samples": 25,
+        "reg_lambda": 2.0,
+        "verbosity": -1,
+        "n_jobs": 1,
+        "random_state": 42,
+        "deterministic": true,
+        "force_col_wise": true
+      },
+      "validation": {
+        "samples": 255,
+        "accuracy": 0.39215686274509803,
+        "macro_f1": 0.2544489743091956,
+        "confusion_matrix": [
+          [
+            80,
+            0,
+            28
+          ],
+          [
+            25,
+            0,
+            10
+          ],
+          [
+            90,
+            2,
+            20
+          ]
+        ],
+        "prediction_counts": {
+          "BUY": 195,
+          "HOLD": 2,
+          "SELL": 58
+        },
+        "per_class": {
+          "BUY": {
+            "precision": 0.41025641025641024,
+            "recall": 0.7407407407407407,
+            "f1-score": 0.528052805280528,
+            "support": 108.0
+          },
+          "HOLD": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 35.0
+          },
+          "SELL": {
+            "precision": 0.3448275862068966,
+            "recall": 0.17857142857142858,
+            "f1-score": 0.23529411764705882,
+            "support": 112.0
+          },
+          "accuracy": 0.39215686274509803,
+          "macro avg": {
+            "precision": 0.2516946654877689,
+            "recall": 0.3064373897707231,
+            "f1-score": 0.2544489743091956,
+            "support": 255.0
+          },
+          "weighted avg": {
+            "precision": 0.32520934103084204,
+            "recall": 0.39215686274509803,
+            "f1-score": 0.32699076135987293,
+            "support": 255.0
+          }
+        }
+      }
+    },
+    {
+      "parameters": {
+        "n_estimators": 24,
+        "max_depth": 5,
+        "num_leaves": 31,
+        "learning_rate": 0.05,
+        "class_weight": "balanced",
+        "min_child_samples": 25,
+        "reg_lambda": 2.0,
+        "verbosity": -1,
+        "n_jobs": 1,
+        "random_state": 42,
+        "deterministic": true,
+        "force_col_wise": true
+      },
+      "validation": {
+        "samples": 255,
+        "accuracy": 0.4,
+        "macro_f1": 0.27772166105499435,
+        "confusion_matrix": [
+          [
+            80,
+            3,
+            25
+          ],
+          [
+            24,
+            1,
+            10
+          ],
+          [
+            85,
+            6,
+            21
+          ]
+        ],
+        "prediction_counts": {
+          "BUY": 189,
+          "HOLD": 10,
+          "SELL": 56
+        },
+        "per_class": {
+          "BUY": {
+            "precision": 0.42328042328042326,
+            "recall": 0.7407407407407407,
+            "f1-score": 0.5387205387205387,
+            "support": 108.0
+          },
+          "HOLD": {
+            "precision": 0.1,
+            "recall": 0.02857142857142857,
+            "f1-score": 0.044444444444444446,
+            "support": 35.0
+          },
+          "SELL": {
+            "precision": 0.375,
+            "recall": 0.1875,
+            "f1-score": 0.25,
+            "support": 112.0
+          },
+          "accuracy": 0.4,
+          "macro avg": {
+            "precision": 0.2994268077601411,
+            "recall": 0.3189373897707231,
+            "f1-score": 0.27772166105499435,
+            "support": 255.0
+          },
+          "weighted avg": {
+            "precision": 0.35770308123249295,
+            "recall": 0.4,
+            "f1-score": 0.34406813230342637,
+            "support": 255.0
+          }
+        }
+      }
+    },
+    {
+      "parameters": {
+        "n_estimators": 24,
+        "max_depth": 5,
+        "num_leaves": 31,
+        "learning_rate": 0.15,
+        "class_weight": "balanced",
+        "min_child_samples": 25,
+        "reg_lambda": 2.0,
+        "verbosity": -1,
+        "n_jobs": 1,
+        "random_state": 42,
+        "deterministic": true,
+        "force_col_wise": true
+      },
+      "validation": {
+        "samples": 255,
+        "accuracy": 0.4117647058823529,
+        "macro_f1": 0.36289088063735947,
+        "confusion_matrix": [
+          [
+            68,
+            13,
+            27
+          ],
+          [
+            18,
+            9,
+            8
+          ],
+          [
+            70,
+            14,
+            28
+          ]
+        ],
+        "prediction_counts": {
+          "BUY": 156,
+          "HOLD": 36,
+          "SELL": 63
+        },
+        "per_class": {
+          "BUY": {
+            "precision": 0.4358974358974359,
+            "recall": 0.6296296296296297,
+            "f1-score": 0.5151515151515151,
+            "support": 108.0
+          },
+          "HOLD": {
+            "precision": 0.25,
+            "recall": 0.2571428571428571,
+            "f1-score": 0.2535211267605634,
+            "support": 35.0
+          },
+          "SELL": {
+            "precision": 0.4444444444444444,
+            "recall": 0.25,
+            "f1-score": 0.32,
+            "support": 112.0
+          },
+          "accuracy": 0.4117647058823529,
+          "macro avg": {
+            "precision": 0.3767806267806268,
+            "recall": 0.37892416225749564,
+            "f1-score": 0.36289088063735947,
+            "support": 255.0
+          },
+          "weighted avg": {
+            "precision": 0.4141360817831406,
+            "recall": 0.4117647058823529,
+            "f1-score": 0.39352785518817,
+            "support": 255.0
+          }
+        }
+      }
+    }
+  ],
+  "candidate_test": {
+    "samples": 274,
+    "accuracy": 0.38686131386861317,
+    "macro_f1": 0.3248306787979263,
+    "confusion_matrix": [
+      [
+        54,
+        7,
+        65
+      ],
+      [
+        18,
+        4,
+        9
+      ],
+      [
+        58,
+        11,
+        48
+      ]
+    ],
+    "prediction_counts": {
+      "BUY": 130,
+      "HOLD": 22,
+      "SELL": 122
+    },
+    "per_class": {
+      "BUY": {
+        "precision": 0.4153846153846154,
+        "recall": 0.42857142857142855,
+        "f1-score": 0.421875,
+        "support": 126.0
+      },
+      "HOLD": {
+        "precision": 0.18181818181818182,
+        "recall": 0.12903225806451613,
+        "f1-score": 0.1509433962264151,
+        "support": 31.0
+      },
+      "SELL": {
+        "precision": 0.39344262295081966,
+        "recall": 0.41025641025641024,
+        "f1-score": 0.401673640167364,
+        "support": 117.0
+      },
+      "accuracy": 0.38686131386861317,
+      "macro avg": {
+        "precision": 0.3302151400512056,
+        "recall": 0.3226200322974516,
+        "f1-score": 0.3248306787979263,
+        "support": 274.0
+      },
+      "weighted avg": {
+        "precision": 0.37958982503675576,
+        "recall": 0.38686131386861317,
+        "f1-score": 0.38259602621387023,
+        "support": 274.0
+      }
+    }
+  },
+  "deployed_model_same_test": {
+    "samples": 274,
+    "accuracy": 0.4306569343065693,
+    "macro_f1": 0.2735554300771692,
+    "confusion_matrix": [
+      [
+        99,
+        13,
+        14
+      ],
+      [
+        27,
+        0,
+        4
+      ],
+      [
+        93,
+        5,
+        19
+      ]
+    ],
+    "prediction_counts": {
+      "BUY": 219,
+      "HOLD": 18,
+      "SELL": 37
+    },
+    "per_class": {
+      "BUY": {
+        "precision": 0.4520547945205479,
+        "recall": 0.7857142857142857,
+        "f1-score": 0.5739130434782609,
+        "support": 126.0
+      },
+      "HOLD": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 31.0
+      },
+      "SELL": {
+        "precision": 0.5135135135135135,
+        "recall": 0.1623931623931624,
+        "f1-score": 0.24675324675324675,
+        "support": 117.0
+      },
+      "accuracy": 0.4306569343065693,
+      "macro avg": {
+        "precision": 0.32185610267802045,
+        "recall": 0.31603581603581604,
+        "f1-score": 0.2735554300771692,
+        "support": 274.0
+      },
+      "weighted avg": {
+        "precision": 0.42715323062288363,
+        "recall": 0.4306569343065693,
+        "f1-score": 0.36928165455617057,
+        "support": 274.0
+      }
+    }
+  },
+  "training_majority_baseline_test": {
+    "samples": 274,
+    "accuracy": 0.42700729927007297,
+    "macro_f1": 0.19948849104859334,
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        126
+      ],
+      [
+        0,
+        0,
+        31
+      ],
+      [
+        0,
+        0,
+        117
+      ]
+    ],
+    "prediction_counts": {
+      "BUY": 0,
+      "HOLD": 0,
+      "SELL": 274
+    },
+    "per_class": {
+      "BUY": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 126.0
+      },
+      "HOLD": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 31.0
+      },
+      "SELL": {
+        "precision": 0.42700729927007297,
+        "recall": 1.0,
+        "f1-score": 0.59846547314578,
+        "support": 117.0
+      },
+      "accuracy": 0.42700729927007297,
+      "macro avg": {
+        "precision": 0.14233576642335766,
+        "recall": 0.3333333333333333,
+        "f1-score": 0.19948849104859334,
+        "support": 274.0
+      },
+      "weighted avg": {
+        "precision": 0.18233523362992168,
+        "recall": 0.42700729927007297,
+        "f1-score": 0.255549125394366,
+        "support": 274.0
+      }
+    }
+  },
+  "improves_accuracy_and_macro_f1_on_same_test": false,
+  "hardware_shape": {
+    "trees": 72,
+    "nodes": 1862,
+    "rom_8192_node_capacity_ok": true
+  },
+  "active_model_sha256": "a73e016c137065fe945459ebe161c2f00bc7bc2d9b622513441eacded8e294c0",
+  "active_scaler_sha256": "30bfd5611e214503307edf79d57de2da67d047bf4bb97b5c3ae9273f297fd420",
+  "limitations": [
+    "Single recent time holdout, not proof of future profitability or accuracy",
+    "Recent data may already have been inspected during live development; this is not a pristine external audit",
+    "No labeled provisional-candle training snapshots are available",
+    "Any candidate deployment requires FPGA re-export, rebuild, fixed-point validation and physical matching before switching both pipelines"
+  ]
+}

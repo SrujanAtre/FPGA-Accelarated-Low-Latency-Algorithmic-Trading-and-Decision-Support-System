@@ -1,0 +1,19 @@
+{
+  "status": "Actual Yahoo current bars executed on physical ZCU104; original model used only as internal verification",
+  "samples": 2,
+  "matching": 2,
+  "results": [
+    {
+      "bar": "2026-10-07 15:10:00+05:30",
+      "fpga_signal": "BUY",
+      "cycles": 957,
+      "raw_score_error": 2.281104408696777e-07
+    },
+    {
+      "bar": "2026-10-07 15:15:00+05:30",
+      "fpga_signal": "BUY",
+      "cycles": 957,
+      "raw_score_error": 1.4598683661937173e-07
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+CPU LIVE RUN SUMMARY
+Samples processed: 0
+Run duration (s): 600.08
+Live throughput (includes feed wait): 0.0000 decisions/s
+Model compute rate estimate: unavailable (no predictions)
+POWER / ENERGY EFFICIENCY
+CPU package average power (RAPL telemetry): 4.656489 W
+CPU package energy: 2750.383189 J
+Measured energy interval: 590.656 s
+Completed decisions in energy interval: 0
+Workload: Live event loop: includes feed waits, features, inference and logging; excludes initial history/model loading
+Per-decision energy / efficiency: unavailable (no completed decisions)
+CPU package, including other system activity; not whole-PC or process-only energy
+Hardware-reported RAPL telemetry; not an external calibrated power-meter reading
+Not directly comparable to FPGA on-chip power from a different workload.

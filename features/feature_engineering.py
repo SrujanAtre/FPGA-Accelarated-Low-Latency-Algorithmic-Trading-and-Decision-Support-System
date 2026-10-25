@@ -494,7 +494,7 @@ def generate_labels(
 #  SECTION 3 — Full pipeline
 # ════════════════════════════════════════════════════════════════════════════════
 
-def build_features(df: pd.DataFrame) -> pd.DataFrame:
+def build_features(df: pd.DataFrame, include_labels: bool = True) -> pd.DataFrame:
 
     print("\n[FeatureEng] Computing features...")
 
@@ -555,7 +555,8 @@ def build_features(df: pd.DataFrame) -> pd.DataFrame:
     out["close_norm"] = (c - c.rolling(20).mean()) / (c.rolling(20).std() + 1e-9)
 
     # ── Labels ────────────────────────────────────────────────────────────────
-    out["label"] = generate_labels(c)
+    if include_labels:
+        out["label"] = generate_labels(c)
 
     # ── Drop NaN rows ─────────────────────────────────────────────────────────
     before = len(out)
@@ -570,6 +571,9 @@ def build_features(df: pd.DataFrame) -> pd.DataFrame:
     # [FIX] validation after processing
     if out.empty:
         raise ValueError("[FeatureEng] All rows dropped after feature engineering.")
+
+    if not include_labels:
+        return out
 
     # ── Label distribution report ─────────────────────────────────────────────
     label_counts = out["label"].value_counts().sort_index()

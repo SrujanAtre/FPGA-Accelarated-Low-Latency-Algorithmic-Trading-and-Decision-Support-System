@@ -1,0 +1,6 @@
+{
+  "ticker": "^NSEI",
+  "model_sha256": "a73e016c137065fe945459ebe161c2f00bc7bc2d9b622513441eacded8e294c0",
+  "scaler_sha256": "30bfd5611e214503307edf79d57de2da67d047bf4bb97b5c3ae9273f297fd420",
+  "last_bar_utc": "2026-10-07 09:55:00+00:00"
+}

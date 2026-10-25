@@ -1,0 +1,17 @@
+
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Generated FPGA build files
+fpga_ml/vivado/
+.Xil/
+*.jou
+*.log
+*.wdb
+*.pb
+
+# Local secrets
+.env
+.env.*
+!.env.example
